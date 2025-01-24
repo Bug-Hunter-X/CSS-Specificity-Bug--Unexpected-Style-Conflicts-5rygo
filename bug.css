@@ -1,0 +1,8 @@
+The CSS specificity rules can lead to unexpected results when multiple selectors match an element.  For instance, consider the following:
+
+```css
+div p { color: blue; }
+.highlight p { color: red; }
+```
+
+If you have a `<div>` with a `<p>` element inside that also has the class `highlight`, the `color: red` declaration will take precedence due to the higher specificity of the class selector. This can lead to hard-to-debug situations when styles don't appear as expected because of a selector you may not have considered.
